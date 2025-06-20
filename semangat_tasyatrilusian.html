@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Semangat</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: pink;
+      font-family: monospace;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .love {
+      position: absolute;
+      top: -30px;
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+  </audio>
+  <h1>Semangat yaa Tasyatrilusian 💖</h1>
+  <script>
+    for (let i = 0; i < 25; i++) {
+      let l = document.createElement("div");
+      l.className = "love";
+      l.style.left = Math.random() * 100 + "vw";
+      l.style.animationDuration = Math.random() * 3 + 2 + "s";
+      l.textContent = "💗";
+      document.body.appendChild(l);
+    }
+  </script>
+</body>
+</html>
